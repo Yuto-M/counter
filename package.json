@@ -1,0 +1,8 @@
+{
+  "name": "counter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Yuto-M/counter.git",
+  "author": "宮川優斗 <miyakaway7@gmail.com>",
+  "license": "MIT"
+}

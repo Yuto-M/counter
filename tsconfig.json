@@ -1,11 +1,14 @@
-// TODO: このオプションの意味
+// このオプションの意味
+// @see https://qiita.com/filunK/items/429a060da20613a1dd9e#sourcemap
 {
   "compilerOptions": {
-    // "outDir": "./dist/",
+    "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "commonjs",
-    "target": "es5",
+    // babelでトランスパイルするからesnext
+    // @see https://qiita.com/hareku/items/dbf0752aa76499a895fd#target
+    "target": "esnext",
     "lib": [
       "es2018",
       "dom"

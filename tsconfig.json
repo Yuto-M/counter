@@ -1,0 +1,15 @@
+// TODO: このオプションの意味
+{
+  "compilerOptions": {
+    // "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "jsx": "react",
+  }
+}

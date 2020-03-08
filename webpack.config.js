@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    app: './src/ts/index.jsx',
+    app: './src/ts/index.tsx',
   },
   output: {
     filename: 'assets/js/[name].bundle.js', // TODO: ここのnameは何で決まる？
@@ -18,12 +18,12 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        test: /\.jsx?$/,
+        test: /\.(j|t)sx?$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
       },
       {
-        test: /\.jsx?$/,
+        test: /\.(j|t)sx?$/,
         exclude: /node_modules/,
         /**
          * NOTE: ts-loaderでtypescript->ES6に、
@@ -34,14 +34,14 @@ module.exports = {
           {
             loader: 'babel-loader',
           },
-          // {
-          //   loader: "ts-loader"
-          // }
+          {
+            loader: 'ts-loader',
+          },
         ],
       },
     ],
   },
-  // devtool: "inline-source-map",
+  devtool: 'inline-source-map',
   plugins: [
     // @see https://webpack.js.org/plugins/copy-webpack-plugin/
     new CopyWebpackPlugin([

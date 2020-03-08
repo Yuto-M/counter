@@ -5,6 +5,7 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
+    "esModuleInterop": true,
     "module": "commonjs",
     // babelでトランスパイルするからesnext
     // @see https://qiita.com/hareku/items/dbf0752aa76499a895fd#target
@@ -14,5 +15,9 @@
       "dom"
     ],
     "jsx": "react",
+    "typeRoots": [
+      "src/typings",
+      "node_modules/@types"
+    ]
   }
 }

@@ -11,14 +11,14 @@ module.exports = {
     filename: "assets/js/[name].bundle.js", // TODO: ここのnameは何で決まる？
     path: path.resolve(__dirname, "dist")
   },
-  // module: {
-  //   rules: [
-  //     {
-  //       enforce: "pre",
-  //       test: /\.js$/,
-  //       exclude: /node_modules/,
-  //       loader: "eslint-loader"
-  //     },
+  module: {
+    rules: [
+      {
+        enforce: "pre",
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      },
   //     {
   //       test: /\.js$/,
   //       exclude: /node_modules/,
@@ -29,30 +29,8 @@ module.exports = {
   //         }
   //       }
   //     },
-  //     {
-  //       test: /\.scss$/,
-  //       use: [
-  //         {
-  //           loader: MiniCssExtractPlugin.loader,
-  //           options: {}
-  //         },
-  //         {
-  //           loader: "css-loader",
-  //           options: {
-  //             url: false,
-  //             sourceMap: true
-  //           }
-  //         },
-  //         {
-  //           loader: "sass-loader",
-  //           options: {
-  //             sourceMap: true
-  //           }
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
+    ]
+  },
   // devtool: "inline-source-map",
   plugins: [
     //   new MiniCssExtractPlugin({

@@ -9,6 +9,7 @@ gulp.registry(script);
 gulp.registry(serve);
 gulp.registry(watch);
 
+// 開発用タスク
 gulp.task(
   "default",
   gulp.series(
@@ -16,4 +17,10 @@ gulp.task(
     "script",
     gulp.parallel("serve", "watch")
   )
+);
+
+// productionビルドタスク
+gulp.task(
+  "build",
+  gulp.series("clean", "script")
 );

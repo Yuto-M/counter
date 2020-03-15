@@ -1,6 +1,11 @@
 const path = require('path');
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// 1. import default from the plugin module
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+// 2. create a transformer;
+// the factory additionally accepts an options object which described below
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = {
   mode: 'development',
@@ -36,6 +41,9 @@ module.exports = {
           },
           {
             loader: 'ts-loader',
+            options: {
+                getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
+            },
           },
         ],
       },

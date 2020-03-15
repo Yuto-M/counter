@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './components/counter/index';
+// import App from './components/App.tsx';
+import styled from 'styled-components';
 
-const App = (): any => {
-  return (
-    <Counter />
-  );
-};
-
+const Hoge = styled.div``;
 ReactDOM.render(
-  <App />,
+  <Hoge />,
   // eslint-disable-next-line no-undef
   document.getElementById('root'),
 );

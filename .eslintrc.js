@@ -4,8 +4,10 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-explicit-any": 0,
     "react/jsx-filename-extension": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "extends": ["airbnb", "plugin:@typescript-eslint/recommended"]
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint", "react-hooks"],
+  extends: ["airbnb", "plugin:@typescript-eslint/recommended"]
 };
